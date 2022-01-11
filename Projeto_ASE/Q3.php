@@ -1,8 +1,8 @@
 
 <?php
-    include_once('conexao.php');
-    session_start();
-    $vetor_resposta = $_SESSION['vetor_resposta_acumulado'];
+include_once('conexao.php');
+session_start();
+$vetor_resposta = $_SESSION['vetor_resposta_acumulado'];
 ?>
 
 <?php
@@ -17,8 +17,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Wise Machines</title>
 </head>
 
 <style>
@@ -26,36 +26,41 @@
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left:50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     }
+    
 </style>
+</style>
+
 <body>
-    <td>
     <div class="center">
     <center>
-    <img src="WiseMachines.gif" width="283" height="60">
-    <h2> <p style="font-family:open sans;"> Analizador de Saúde Emocional </p></h2>
+    <br><br>    
+    <img src="WiseMachines.gif" width="283" height="60"><br>
+    <img src="dr_freud.gif" width="80" height="100">
+    <b><p><font  color="black" style="font-family:open sans;font-size:150%;"
+    >Dr. Freud</font><font  color="blue" style="font-family:open sans;font-size:150%;"
+    >Bot</font></p></b>
     
-    <form style="text-align:center" 
-        action="http://localhost/wise_machines/analizador_de_saude_emocional/Q4.php" method="post">
-    <fieldset>
-        <legend> <b><p style="font-size:110%;font-family:open sans;" > 
-            <font  color="black" > 3/14 - Grau da sua percepção pessoal de prazer acumulado nos últimos 3 dias.</font> <br>
-            <font  color="darkorange"   > Diversão - Atividade Sexual -  Distração - Gastronomia - Viagem  </font> <br>
-            <font  color="black" > Grau 7 = Prazer Máximo <br> Grau 1 = Prazer Mínimo </font> </p></b></legend>
-        <input type="radio" name="valor_Q3" value="7" required> <b><font  color="black" style="font-family:open sans;" >  7  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="6" required> <b><font  color="black" style="font-family:open sans;" >  6  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="5" required> <b><font  color="black" style="font-family:open sans;" >  5  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="4" required> <b><font  color="black" style="font-family:open sans;" >  4  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="3" required> <b><font  color="black" style="font-family:open sans;" >  3  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="2" required> <b><font  color="black" style="font-family:open sans;" >  2  </font> </b> <br><br>
-        <input type="radio" name="valor_Q3" value="1" required> <b><font  color="black" style="font-family:open sans;" >  1  </font> </b> <br><br>
-        <br>
+    <form style="text-align:center;" action="Q4.php" method="post">
+        <fieldset>
+        <legend><b> <font  color="black" style="font-family:open sans;font-size:100%;"> &nbsp; 
+        3/14 - Qual seria o seu grau de prazer acumulado nos últimos 2 dias? &nbsp; </font></b></legend>
+        <input type="radio" name="valor_Q3" value="7" required> <b><font  color="black" style="font-family:open sans;" >  7  </font> </b>  <br> 
+        <input type="radio" name="valor_Q3" value="6" required> <b><font  color="black" style="font-family:open sans;" >  6  </font> </b>  <br>
+        <input type="radio" name="valor_Q3" value="5" required> <b><font  color="black" style="font-family:open sans;" >  5  </font> </b>  <br>
+        <input type="radio" name="valor_Q3" value="4" required> <b><font  color="black" style="font-family:open sans;" >  4  </font> </b>  <br>
+        <input type="radio" name="valor_Q3" value="3" required> <b><font  color="black" style="font-family:open sans;" >  3  </font> </b>  <br>
+        <input type="radio" name="valor_Q3" value="2" required> <b><font  color="black" style="font-family:open sans;" >  2  </font> </b>  <br>
+        <input type="radio" name="valor_Q3" value="1" required> <b><font  color="black" style="font-family:open sans;" >  1  </font> </b>  <br>
         <input type="submit" value="Próximo">
-    </fieldset>
-    </form></code>
+        </fieldset>
+    </form>
+    <p> Powered by:  <img src="14_bis_logo.gif" width="32" height="26"> </p> 
+    </center>
+
 
     <?php
         if(isset($_POST["valor_Q3"])) {

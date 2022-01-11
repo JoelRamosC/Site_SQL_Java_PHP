@@ -43,17 +43,17 @@ $vetor_resposta = $_SESSION['vetor_resposta_acumulado'];
     >Dr. Freud</font><font  color="blue" style="font-family:open sans;font-size:150%;"
     >Bot</font></p></b>
     
-    <form style="text-align:center;" action="Q9.php" method="post">
+    <form style="text-align:center;" action="resultado.php" method="post">
         <fieldset>
         <legend><b> <font  color="black" style="font-family:open sans;font-size:100%;"> &nbsp; 
-        8/14 - Qual seria a sua percepção de amor sentido nos últimos 2 dias? &nbsp; </font></b></legend>
-        <input type="radio" name="valor_Q8" value="7" required> <b><font  color="black" style="font-family:open sans;" >  7  </font> </b>  <br> 
-        <input type="radio" name="valor_Q8" value="6" required> <b><font  color="black" style="font-family:open sans;" >  6  </font> </b>  <br>
-        <input type="radio" name="valor_Q8" value="5" required> <b><font  color="black" style="font-family:open sans;" >  5  </font> </b>  <br>
-        <input type="radio" name="valor_Q8" value="4" required> <b><font  color="black" style="font-family:open sans;" >  4  </font> </b>  <br>
-        <input type="radio" name="valor_Q8" value="3" required> <b><font  color="black" style="font-family:open sans;" >  3  </font> </b>  <br>
-        <input type="radio" name="valor_Q8" value="2" required> <b><font  color="black" style="font-family:open sans;" >  2  </font> </b>  <br>
-        <input type="radio" name="valor_Q8" value="1" required> <b><font  color="black" style="font-family:open sans;" >  1  </font> </b>  <br>
+        14/14 - Qual seria o seu grau de atividade espiritual dos últimos 2 dias? &nbsp; </font></b></legend>
+        <input type="radio" name="valor_Q14" value="7" required> <b><font  color="black" style="font-family:open sans;" >  7  </font> </b>  <br> 
+        <input type="radio" name="valor_Q14" value="6" required> <b><font  color="black" style="font-family:open sans;" >  6  </font> </b>  <br>
+        <input type="radio" name="valor_Q14" value="5" required> <b><font  color="black" style="font-family:open sans;" >  5  </font> </b>  <br>
+        <input type="radio" name="valor_Q14" value="4" required> <b><font  color="black" style="font-family:open sans;" >  4  </font> </b>  <br>
+        <input type="radio" name="valor_Q14" value="3" required> <b><font  color="black" style="font-family:open sans;" >  3  </font> </b>  <br>
+        <input type="radio" name="valor_Q14" value="2" required> <b><font  color="black" style="font-family:open sans;" >  2  </font> </b>  <br>
+        <input type="radio" name="valor_Q14" value="1" required> <b><font  color="black" style="font-family:open sans;" >  1  </font> </b>  <br>
         <input type="submit" value="Próximo">
         </fieldset>
     </form>
@@ -61,15 +61,17 @@ $vetor_resposta = $_SESSION['vetor_resposta_acumulado'];
     </center>
 
     <?php
-        if(isset($_POST["valor_Q8"])) {
-            $vetor_resposta[8] = $_POST["valor_Q8"];
+        if(isset($_POST["valor_Q14"])) {
+            $vetor_resposta[14] = $_POST["valor_Q14"];
             print_r ($vetor_resposta);
         }
         else {
-            $vetor_resposta[7] = $_POST["valor_Q7"];
+            $vetor_resposta[13] = $_POST["valor_Q13"];
             $_SESSION['vetor_resposta_acumulado'] = $vetor_resposta;
             //print_r ($vetor_resposta);
         }
+
+       
     ?>
     
 </body>
